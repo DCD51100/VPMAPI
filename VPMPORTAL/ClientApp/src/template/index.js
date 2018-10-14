@@ -26,54 +26,41 @@ class Template extends Component {
 
 
     render() {
-        {
-            _.map(publicRoutes, (route, key) => {
-                const { component, path } = route;
-                return (
-                    <Route
-                        exact
-                        path={path}
-                        key={key}
-                        render={(route) => <PublicLayout component={component} route={route} user={user} />}
-                    />
-                );
-            })
-        }
         const user = this.props.user;
-        //<BrowserRouter>
-        //    <Switch>
-        //        {_.map(publicRoutes, (route, key) => {
-        //            const { component, path } = route;
-        //            return (
-        //                <Route
-        //                    exact
-        //                    path={path}
-        //                    key={key}
-        //                    render={(route) => <PublicLayout component={component} route={route} user={user} />}
-        //                />
-        //            );
-        //        })}
+        <BrowserRouter>
+            <Switch>
+                {_.map(publicRoutes, (route, key) => {
+                    const { component, path } = route;
+                    return (
+                        <Route
+                            exact
+                            path={path}
+                            key={key}
+                            render={(route) => <PublicLayout component={component} route={route} user={user} />}
+                        />
+                    );
+                })}
 
-        //        {_.map(privateRoutes, (route, key) => {
-        //            const { component, path } = route;
-        //            return (
-        //                <Route
-        //                    exact
-        //                    path={path}
-        //                    key={key}
-        //                    render={(route) =>
-        //                        user.logged ? (
-        //                            <PrivateLayout component={component} route={route} user={user} userActions={this.userActions} />
-        //                        ) : (
-        //                                <PublicLayout component={LoginPage} route={route} user={user} />
-        //                            )
-        //                    }
-        //                />
-        //            );
-        //        })}
-        //        <Route component={NotFound} />
-        //    </Switch>
-        //</BrowserRouter>
+                {_.map(privateRoutes, (route, key) => {
+                    const { component, path } = route;
+                    return (
+                        <Route
+                            exact
+                            path={path}
+                            key={key}
+                            render={(route) =>
+                                user.logged ? (
+                                    <PrivateLayout component={component} route={route} user={user} userActions={this.userActions} />
+                                ) : (
+                                        <PublicLayout component={LoginPage} route={route} user={user} />
+                                    )
+                            }
+                        />
+                    );
+                })}
+                <Route component={NotFound} />
+            </Switch>
+        </BrowserRouter>
     }
 }
 

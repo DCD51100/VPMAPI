@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VPMAPI", "VPMAPI\VPMAPI.csproj", "{D3CC1F3C-8EFE-4756-95E7-79E3D0A7D7D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPMAPI", "VPMAPI\VPMAPI.csproj", "{D3CC1F3C-8EFE-4756-95E7-79E3D0A7D7D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPMPORTAL", "VPMPORTAL\VPMPORTAL.csproj", "{6CCA6F75-0F33-4EC6-8A79-616F46D6E22C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D3CC1F3C-8EFE-4756-95E7-79E3D0A7D7D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3CC1F3C-8EFE-4756-95E7-79E3D0A7D7D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3CC1F3C-8EFE-4756-95E7-79E3D0A7D7D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CCA6F75-0F33-4EC6-8A79-616F46D6E22C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCA6F75-0F33-4EC6-8A79-616F46D6E22C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCA6F75-0F33-4EC6-8A79-616F46D6E22C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCA6F75-0F33-4EC6-8A79-616F46D6E22C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
